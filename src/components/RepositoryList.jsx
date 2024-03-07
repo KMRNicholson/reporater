@@ -55,24 +55,17 @@ const repositories = [
 
 const ItemSeparator = () => <View style={styles.separator} />;
 
-const RepositoryItem = ({
-  fullName,
-  description,
-  language,
-  forksCount,
-  stargazersCount,
-  ratingAverage,
-  reviewCount }) =>
+const RepositoryItem = (props) =>
 {
   return (
     <View>
-      <Text>Full name: {fullName}</Text>
-      <Text>Description: {description}</Text>
-      <Text>Language: {language}</Text>
-      <Text>Forks: {forksCount}</Text>
-      <Text>Stars: {stargazersCount}</Text>
-      <Text>Average rating: {ratingAverage}</Text>
-      <Text>Reviews: {reviewCount}</Text>
+      <Text>Full name: {props.fullName}</Text>
+      <Text>Description: {props.description}</Text>
+      <Text>Language: {props.language}</Text>
+      <Text>Forks: {props.forksCount}</Text>
+      <Text>Stars: {props.stargazersCount}</Text>
+      <Text>Average rating: {props.ratingAverage}</Text>
+      <Text>Reviews: {props.reviewCount}</Text>
     </View>
   );
 }
