@@ -1,4 +1,4 @@
-import RepositoryList from './RepositoryList';
+import RepositoryList from './Repository/RepositoryList';
 import AppBar from './AppBar';
 import Text from './Text';
 import AppBarTab from './AppBarTab';
