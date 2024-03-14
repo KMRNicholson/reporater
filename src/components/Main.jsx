@@ -1,9 +1,16 @@
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Route, Routes, Navigate } from 'react-router-native';
 
 import RepositoryList from './Repository/RepositoryList';
 import SignIn from './Auth/SignIn';
 import AppBar from './AppBar/AppBar';
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    flexGrow: 1,
+  },
+});
 
 const Main = () => {
   const onSubmit = values => {
@@ -12,7 +19,7 @@ const Main = () => {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       <AppBar />
       <Routes>
         <Route path='/' element={<RepositoryList />} />
