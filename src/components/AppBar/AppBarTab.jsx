@@ -1,10 +1,19 @@
-import { Pressable } from 'react-native';
+import { Pressable, View, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  spacing: {
+    padding: 10
+  },
+});
 
 const AppBarTab = (props) => {
   return (
-    <Pressable onPress={props.onPress}>
-      {props.children}
-    </Pressable>
+    <View style={styles.spacing}>
+      <Pressable onPress={props.onPress}>
+        {props.children}
+      </Pressable>
+    </View>
+    
   )
 };
 

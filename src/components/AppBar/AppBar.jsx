@@ -1,4 +1,5 @@
 import { View, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
 
 import theme from '../../theme';
 import AppBarTab from './AppBarTab';
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   spacing: {
-    padding: 10
+    paddingTop: Constants.statusBarHeight
   },
   color: {
     backgroundColor: theme.colors.backgroundSecondary,
