@@ -1,18 +1,19 @@
-import RepositoryList from './Repository/RepositoryList';
-import AppBar from './AppBar';
-import Text from './Text';
-import AppBarTab from './AppBarTab';
 import { View } from 'react-native';
+import { Route, Routes, Navigate } from 'react-router-native';
+
+import RepositoryList from './Repository/RepositoryList';
+import SignIn from './Auth/SignIn';
+import AppBar from './AppBar/AppBar';
 
 const Main = () => {
   return (
     <View>
-      <AppBar>
-        <AppBarTab onPress={() => console.log('Pressed!')}>
-          <Text fontWeight="bold" color="textSecondary">Repositories</Text>
-        </AppBarTab>
-      </AppBar>
-      <RepositoryList />
+      <AppBar />
+      <Routes>
+        <Route path='/' element={<RepositoryList />} />
+        <Route path='/signin' element={<SignIn />} />
+        <Route path='*' element={<Navigate to='/' replace />} />
+      </Routes>
     </View>
   );
 };
