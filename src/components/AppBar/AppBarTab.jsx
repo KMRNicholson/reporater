@@ -13,7 +13,6 @@ const AppBarTab = (props) => {
         {props.children}
       </Pressable>
     </View>
-    
   )
 };
 
